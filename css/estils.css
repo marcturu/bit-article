@@ -1,4 +1,4 @@
-/* ----- Contingut compartit dels tres arxius .html----- */
+/* ----- Estils globals dels tres arxius .html----- */
 body {
     display: flex;
     flex-direction: column;
@@ -59,7 +59,6 @@ footer a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    font-size: 1.1rem;
 }
 
 .container h1 {
@@ -69,12 +68,45 @@ footer a:hover {
 }
 
 .container p {
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
-/* ----- Contingut específic de index.html ----- */
+figure {
+    margin: 0;
+    text-align: center;
+}
 
-/* ----- Contingut específic de recursos.html ----- */
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+a.link_extern {
+    color: rgb(226 53 42);
+    text-decoration: none;
+    transition: color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+a.link_extern:hover {
+    color: rgb(226 53 42 / 0.5)
+}
+
+a.link_extern img {
+    width: 16px;
+    height: 16px;
+    transition: color 0.25s ease;
+}
+
+a.link_extern:hover img {
+    content: url("../img/external-link-modif.svg");
+}
+
+/* ----- Estils específics de index.html ----- */
+
+/* ----- Estils específics  de recursos.html ----- */
 .audio-container {
     display: flex;
     flex-direction: column;
@@ -100,6 +132,7 @@ footer a:hover {
 
 .categories-fill li {
     list-style-type: circle;
+    font-size: 1.1rem;
     margin-bottom: 13px;
 }
 
@@ -114,29 +147,29 @@ footer a:hover {
     color: rgb(226 53 42 / 0.5);
 }
 
-/* ----- Contingut específic de glossari.html ----- */
+/* ----- Estils específics  de glossari.html ----- */
 
-main h2 {
+.container.glossari h2 {
     border-bottom: 1px solid rgb(43 23 3);
     font-size: 2rem;
 }
 
-dl {
+.container.glossari dl {
     margin-left: 30px;
 }
 
-dt {
+.container.glossari dt {
     font-weight: bolder;
     font-size: 1.25rem;
     margin-top: 30px;
 }
 
-dl ul {
+.container.glossari dl ul {
     list-style-type: square;
     margin-top: 10px;
     padding-left: 4px;
 }
 
-dl ul li {
+.container.glossari dl ul li {
     margin-bottom: 5px;
 }
