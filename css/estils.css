@@ -1,3 +1,4 @@
+/* ----- Contingut compartit dels tres arxius .html----- */
 body {
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@ body {
 
 header {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
 nav ul {
@@ -26,6 +27,7 @@ nav a {
     text-decoration: none;
     color: rgb(43 23 3);
     font-weight: bold;
+    transition: color 0.25s ease;
 }
 
 nav a:hover {
@@ -56,6 +58,7 @@ footer a:hover {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
     font-size: 1.1rem;
 }
 
@@ -69,11 +72,14 @@ footer a:hover {
     line-height: 1.6;
 }
 
+/* ----- Contingut específic de index.html ----- */
+
+/* ----- Contingut específic de recursos.html ----- */
 .audio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid rgb(43 23 3);
     padding: 20px;
     margin: 0 0px;
 }
@@ -81,4 +87,56 @@ footer a:hover {
 .audio-container figcaption {
     font-size: 0.7rem;
     margin: 0 0 20px 0;
+}
+
+.categories-pare {
+    list-style-type: square;
+    padding-left: 70px;
+}
+
+.categories-pare h2 {
+    font-weight: normal;
+}
+
+.categories-fill li {
+    list-style-type: circle;
+    margin-bottom: 13px;
+}
+
+.categories-fill a {
+    text-decoration: none;
+    color: rgb(226 53 42);
+    transition: color 0.25s ease;
+}
+
+.categories-fill a:hover {
+    text-decoration: none;
+    color: rgb(226 53 42 / 0.5);
+}
+
+/* ----- Contingut específic de glossari.html ----- */
+
+main h2 {
+    border-bottom: 1px solid rgb(43 23 3);
+    font-size: 2rem;
+}
+
+dl {
+    margin-left: 30px;
+}
+
+dt {
+    font-weight: bolder;
+    font-size: 1.25rem;
+    margin-top: 30px;
+}
+
+dl ul {
+    list-style-type: square;
+    margin-top: 10px;
+    padding-left: 4px;
+}
+
+dl ul li {
+    margin-bottom: 5px;
 }
