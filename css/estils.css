@@ -18,6 +18,12 @@ blockquote {
     font-weight: var(--font-quote-weight);
     border-top: 1px solid var(--color-quasi-negre);
     border-bottom: 1px solid var(--color-quasi-negre);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    padding: 20px 0;
 }
 
 q, cite {
@@ -137,6 +143,10 @@ a.link_extern:hover img {
 }
 
 /* ----- Estils específics de index.html ----- */
+.container.article h2 {
+    font-size: 2.5rem;
+}
+
 .autor {
     text-align: center;
     font-weight: bold;
@@ -182,9 +192,56 @@ figure img {
     margin-top: 10px;
 }
 
+.video-figure iframe {
+    width: 100%;
+    max-width: 857px;
+    aspect-ratio: 857 / 435; /* Manté la relació d'aspecte original */
+    display: block;
+    margin: 0 auto;
+    border: 0;
+}
+
 .conceptes-amb-serif {
     font-family: var(--font-serif);
 }
+
+.blockquote-footer {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.jose-heinz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0;
+}
+
+.jose-heinz > img {
+    border-radius: 50%;
+    display: block;
+}
+
+.jose-heinz figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0;
+}
+
+.jose-heinz h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.jose-heinz p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
 
 /* ----- Estils específics  de recursos.html ----- */
 .audio-container {
