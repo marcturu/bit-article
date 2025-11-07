@@ -1,3 +1,35 @@
+/* ----- Custom properties per les variables ----- */
+:root {
+    --color-quasi-negre: rgb(43 23 3);
+    --color-blanc: rgb(255 255 255);
+    --color-gris-molt-clar: rgb(244 244 244);
+    --color-vermell: rgb(226 53 42);
+    --color-vermell-modificat: rgb(226 53 42 / 0.5);
+    --color-gris-fosc: rgb(200 200 200); /* Per al hover del footer */
+
+    --font-sans-serif: 'Verdana', sans-serif;
+    --font-serif: 'Georgia', serif;
+    --font-quote-weight: 700;
+   
+}
+
+blockquote {
+    font-family: var(--font-serif);
+    font-weight: var(--font-quote-weight);
+    border-top: 1px solid var(--color-quasi-negre);
+    border-bottom: 1px solid var(--color-quasi-negre);
+}
+
+q, cite {
+    font-family: var(--font-serif);
+    font-weight: var(--font-quote-weight);
+}
+
+abbr {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
 /* ----- Estils globals dels tres arxius .html----- */
 body {
     display: flex;
@@ -5,8 +37,8 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
-    background-color: rgb(244 244 244);
+    font-family: var(--font-sans-serif);
+    background-color: var(--color-gris-molt-clar);
 }
 
 header {
@@ -16,41 +48,45 @@ header {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+nav li {
+    margin: 2.5px;
+}
+
 nav a {
     text-decoration: none;
-    color: rgb(43 23 3);
+    color: var(--color-quasi-negre);
     font-weight: bold;
     transition: color 0.25s ease;
 }
 
 nav a:hover {
-    color: rgb(226 53 42);
+    color: var(--color-vermell);
 }
 
 nav a.active {
-  color: rgb(226 53 42 / 0.5);
+  color: var(--color-vermell-modificat);
 }
 
 footer {
     width: 100%;
     text-align: center;
-    background-color: rgb(43 23 3);
-    color: rgb(255 255 255);
+    background-color: var(--color-quasi-negre);
+    color: var(--color-blanc);
 }
 
 footer a {
-    color: rgb(255 255 255);
+    color: var(--color-blanc);
 }
 
 footer a:hover {
-   color: rgb(200 200 200);
+   color: var(--color-gris-fosc);
 }
 
 .container {
@@ -72,18 +108,14 @@ footer a:hover {
     line-height: 1.6;
 }
 
-figure {
-    margin: 0;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
+/* FigCaption de la img d'index.html i de l'audio de recursos.html*/
+figure figcaption {
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
 }
 
 a.link_extern {
-    color: rgb(226 53 42);
+    color: var(--color-vermell);
     text-decoration: none;
     transition: color 0.25s ease;
     display: inline-flex;
@@ -91,7 +123,7 @@ a.link_extern {
 }
 
 a.link_extern:hover {
-    color: rgb(226 53 42 / 0.5)
+    color: var(--color-vermell-modificat);
 }
 
 a.link_extern img {
@@ -105,6 +137,54 @@ a.link_extern:hover img {
 }
 
 /* ----- Estils específics de index.html ----- */
+.autor {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-vermell);
+    margin: 0;
+}
+
+time {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+p.primera-introduccio {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+p.segona-introduccio {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+figure {
+    margin: 10px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Encara que compartim figcaption, només al index.html necessitem afegir el margin-top*/
+.container.article figure figcaption {
+    margin-top: 10px;
+}
+
+.conceptes-amb-serif {
+    font-family: var(--font-serif);
+}
 
 /* ----- Estils específics  de recursos.html ----- */
 .audio-container {
@@ -113,12 +193,6 @@ a.link_extern:hover img {
     align-items: center;
     border: 1px solid rgb(43 23 3);
     padding: 20px;
-    margin: 0 0px;
-}
-
-.audio-container figcaption {
-    font-size: 0.7rem;
-    margin: 0 0 20px 0;
 }
 
 .categories-pare {
@@ -138,13 +212,13 @@ a.link_extern:hover img {
 
 .categories-fill a {
     text-decoration: none;
-    color: rgb(226 53 42);
+    color: var(--color-vermell);
     transition: color 0.25s ease;
 }
 
 .categories-fill a:hover {
     text-decoration: none;
-    color: rgb(226 53 42 / 0.5);
+    color: var(--color-vermell-modificat);
 }
 
 /* ----- Estils específics  de glossari.html ----- */
