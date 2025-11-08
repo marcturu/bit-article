@@ -13,6 +13,7 @@
    
 }
 
+/* ----- Estil pel blockquote, q i cite ----- */
 blockquote {
     font-family: var(--font-serif);
     font-weight: var(--font-quote-weight);
@@ -83,12 +84,16 @@ nav a.active {
 footer {
     width: 100%;
     text-align: center;
+    font-size: 0.8rem;
     background-color: var(--color-quasi-negre);
     color: var(--color-blanc);
+    padding: 30px 0;
 }
 
 footer a {
     color: var(--color-blanc);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 footer a:hover {
@@ -114,12 +119,13 @@ footer a:hover {
     line-height: 1.6;
 }
 
-/* FigCaption de la img d'index.html i de l'audio de recursos.html*/
+/* figcaption de la img i vídeo d'index.html i de l'audio de recursos.html*/
 figure figcaption {
     font-size: 0.7rem;
     margin: 0 0 20px 0;
 }
 
+/* Estils per als enllaços externs amb icona */
 a.link_extern {
     color: var(--color-vermell);
     text-decoration: none;
@@ -132,17 +138,22 @@ a.link_extern:hover {
     color: var(--color-vermell-modificat);
 }
 
-a.link_extern img {
-    width: 16px;
-    height: 16px;
-    transition: color 0.25s ease;
+a[href^="http"]:not(.no-icon)::after {
+  content: "";
+  display: inline-block;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/external-link.svg");
+  transition: background-image 0.25s ease;
+  transform: translateY(-1.5px);
 }
 
-a.link_extern:hover img {
-    content: url("../img/external-link-modif.svg");
-}
+a[href^="http"]:not(.no-icon):hover::after {
+  background-image: url("../img/external-link-modif.svg");
+} 
 
-/* ----- Estils específics de index.html ----- */
+/* ----- Estils específics d'index.html ----- */
 .container.article h2 {
     font-size: 2.5rem;
 }
@@ -173,8 +184,8 @@ p.segona-introduccio {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
     font-size: 1.5rem;
+    text-align: left;
 }
 
 figure {
@@ -218,6 +229,7 @@ figure img {
     align-items: flex-start;
     text-align: left;
     gap: 0;
+    margin: 30px 0 0 0;
 }
 
 .jose-heinz > img {
@@ -234,21 +246,20 @@ figure img {
 
 .jose-heinz h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .jose-heinz p {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
-
-/* ----- Estils específics  de recursos.html ----- */
+/* ----- Estils específics de recursos.html ----- */
 .audio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(43 23 3);
+    border: 1px solid var(--color-quasi-negre);
     padding: 20px;
 }
 
@@ -278,10 +289,9 @@ figure img {
     color: var(--color-vermell-modificat);
 }
 
-/* ----- Estils específics  de glossari.html ----- */
-
+/* ----- Estils específics de glossari.html ----- */
 .container.glossari h2 {
-    border-bottom: 1px solid rgb(43 23 3);
+    border-bottom: 1px solid var(--color-quasi-negre);
     font-size: 2rem;
 }
 
