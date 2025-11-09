@@ -13,7 +13,7 @@
    
 }
 
-/* ----- Estil pel blockquote, q i cite ----- */
+/* ----- Estil pel blockquote, q, cite i abbr ----- */
 blockquote {
     font-family: var(--font-serif);
     font-weight: var(--font-quote-weight);
@@ -24,7 +24,7 @@ blockquote {
     margin-right: auto;
     font-size: 1.3rem;
     line-height: 1.6;
-    padding: 20px 0;
+    padding: 20px 0;    
 }
 
 q, cite {
@@ -46,16 +46,17 @@ body {
     padding: 0;
     font-family: var(--font-sans-serif);
     background-color: var(--color-gris-molt-clar);
+    color: var(--color-quasi-negre);
 }
 
 header {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0 5px 0;
 }
 
 nav ul {
     list-style-type: none;
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -87,6 +88,7 @@ footer {
     font-size: 0.8rem;
     background-color: var(--color-quasi-negre);
     color: var(--color-blanc);
+    margin-top: 50px;
     padding: 30px 0;
 }
 
@@ -96,7 +98,8 @@ footer a {
     cursor: pointer;
 }
 
-footer a:hover {
+/* Utilitzat com a extra en l'enllaç de la UOC al footer */
+footer a:hover { 
    color: var(--color-gris-fosc);
 }
 
@@ -105,13 +108,13 @@ footer a:hover {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
 }
 
 .container h1 {
     text-align: center;
     font-size: 3.5rem;
     line-height: 1;
+    margin: 65px 0;
 }
 
 .container p {
@@ -119,7 +122,7 @@ footer a:hover {
     line-height: 1.6;
 }
 
-/* figcaption de la img i vídeo d'index.html i de l'audio de recursos.html*/
+/* figcaption de la <img> i <iframe> d'index.html i del <audio> de recursos.html*/
 figure figcaption {
     font-size: 0.7rem;
     margin: 0 0 20px 0;
@@ -138,6 +141,7 @@ a.link_extern:hover {
     color: var(--color-vermell-modificat);
 }
 
+/* Afegim la icona d'enllaç extern només als enllaços que comencen per "http" i que no tinguin la classe "no-icon" */
 a[href^="http"]:not(.no-icon)::after {
   content: "";
   display: inline-block;
@@ -149,6 +153,7 @@ a[href^="http"]:not(.no-icon)::after {
   transform: translateY(-1.5px);
 }
 
+/* Canviem la icona en passar el cursor per sobre de l'enllaç */
 a[href^="http"]:not(.no-icon):hover::after {
   background-image: url("../img/external-link-modif.svg");
 } 
@@ -162,7 +167,7 @@ a[href^="http"]:not(.no-icon):hover::after {
     text-align: center;
     font-weight: bold;
     color: var(--color-vermell);
-    margin: 0;
+    margin-bottom: 2.5px;
 }
 
 time {
@@ -170,7 +175,6 @@ time {
     text-align: center;
     font-weight: bold;
     font-size: 0.8rem;
-    margin-top: 0;
     margin-bottom: 30px;
 }
 
@@ -188,6 +192,7 @@ p.segona-introduccio {
     text-align: left;
 }
 
+/* Encara que utilitzem figure també a recursos.html, allà fem servir una classe personalitzada pel figure de l'audio */
 figure {
     margin: 10px 0;
     text-align: center;
@@ -198,7 +203,7 @@ figure img {
     height: auto;
 }
 
-/* Encara que compartim figcaption, només al index.html necessitem afegir el margin-top*/
+/* Encara que utilitzem figcaption també a recursos.html, només al index.html necessitem afegir el margin-top*/
 .container.article figure figcaption {
     margin-top: 10px;
 }
@@ -206,14 +211,10 @@ figure img {
 .video-figure iframe {
     width: 100%;
     max-width: 857px;
-    aspect-ratio: 857 / 435; /* Manté la relació d'aspecte original */
+    aspect-ratio: 16 / 9; /* Manté la relació d'aspecte original */
     display: block;
     margin: 0 auto;
     border: 0;
-}
-
-.conceptes-amb-serif {
-    font-family: var(--font-serif);
 }
 
 .blockquote-footer {
@@ -260,16 +261,20 @@ figure img {
     flex-direction: column;
     align-items: center;
     border: 1px solid var(--color-quasi-negre);
-    padding: 20px;
+    padding: 25px;
 }
 
 .categories-pare {
     list-style-type: square;
-    padding-left: 70px;
+    padding-left: 100px;
 }
 
 .categories-pare h2 {
     font-weight: normal;
+}
+
+.categories-pare li::marker {
+    font-size: 1.5rem; /* Augmenta la mida del marcador square de la llista */
 }
 
 .categories-fill li {
@@ -292,11 +297,11 @@ figure img {
 /* ----- Estils específics de glossari.html ----- */
 .container.glossari h2 {
     border-bottom: 1px solid var(--color-quasi-negre);
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .container.glossari dl {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .container.glossari dt {
