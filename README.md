@@ -37,7 +37,7 @@ The webpage will be available at **localhost**.
 ## 📂 Documentation
 
 All additional documentation is in:
-- **HTML&CSS_ExplanationReport**
+- **HTML&CSS_ExplanationReport.pdf**
 
 ---
 ## 📷 Screenshots 
