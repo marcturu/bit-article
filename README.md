@@ -1,4 +1,4 @@
-# 📰 BIT Article — Structured web content
+# <img src="img/bit-logo.svg" alt="Bit Article" width="150"/> — Structured web content
 
 <sub>🗓️ Developed in November 2025</sub>
 
