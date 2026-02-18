@@ -15,7 +15,7 @@ The goal was to reinforce the basic concepts from HTML & CSS by presenting well-
 - **Semantic text elements** for clarity: block quotations, inline quotes, citations, abbreviations, and emphasized text.
 - **Multimedia and embedded content**, including images, audio, video, and inline frames, organized within semantic `<figure>` and `<figcaption>` containers.
 - **CSS styling and custom properties**: Variables for colors and fonts for consistency across the site, styles for semantic text elements, and specific styles for navigation, footer, article containers, responsive video ratios, and hover/active states.
-- **Accessibility and validation**: HTML and CSS validated using W3C tools to ensure proper semantic structure, formatting, and accessibility compliance.
+- **Accessibility and validation**: All HTML files validated with [W3C Validator](https://validator.w3.org/) and CSS validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) — no errors or warnings found across all pages.
 
 ---
 
