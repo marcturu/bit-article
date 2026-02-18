@@ -36,8 +36,11 @@ The webpage will be available at **localhost**.
 
 ## 📂 Documentation
 
-All additional documentation is in:
-- **HTML&CSS_ExplanationReport.pdf**
+All additional documentation is in the `/DOCS` directory:
+- **HTML entities**
+- **CSS styles**
+- **Significant aportations**
+- **Accessibility and validation** 
 
 ---
 ## 📷 Screenshots 
