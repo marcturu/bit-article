@@ -30,7 +30,7 @@ cd bit-article
 ### 2. Try the webpage locally
 Open the ```.html``` files in a browser or use **Live Server**. 
 
-The webpage will be available at **localhost**.
+The webpage will be available at **http://127.0.0.1:5500/**.
 
 ---
 
