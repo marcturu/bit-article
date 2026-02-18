@@ -2,7 +2,7 @@
 
 <sub>🗓️ Developed in November 2025</sub>
 
-This project is a **structured webpage developed with HTML & CSS**, composed of three pages: `index.html`, `recursos.html`, and `glossari.html`, along with additional assets such as CSS stylesheets in `/css`, images in `/img`, and audio files in `/music`.  
+This project is a **structured webpage developed with HTML5 & CSS3**, composed of three pages: `index.html`, `recursos.html`, and `glossari.html`, along with additional assets such as CSS stylesheets in `/css`, images in `/img`, and audio files in `/music`.  
 The goal was to reinforce the basic concepts from HTML & CSS by presenting well-organized HTML documents using semantic elements and proper styling.
 
 ---
