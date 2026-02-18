@@ -24,7 +24,6 @@ The goal was to reinforce the basic concepts from HTML & CSS by presenting well-
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/marcturu/bit-article.git
-cd bit-article
 ```
 
 ### 2. Try the webpage locally
