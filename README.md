@@ -30,7 +30,7 @@ git clone https://github.com/marcturu/bit-article.git
 ### 2. Try the webpage locally
 Open the ```.html``` files directly in a browser or use **Live Server**. 
 
-The webpage will typically be available at **http://127.0.0.1:5500/**.
+The webpage will typically be available at `http://127.0.0.1:5500/`.
 
 ---
 
