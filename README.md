@@ -1,4 +1,4 @@
-# <img src="img/bit-logo.svg" alt="Bit Article" width="150"/> — Structured web content
+# <img src="img/bit-logo.svg" alt="Bit Article" width="150"/> — Structured web content platform
 
 <sub>🗓️ Developed in October 2025</sub>
 
